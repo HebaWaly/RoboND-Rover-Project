@@ -55,7 +55,7 @@ def update_rover(Rover, data):
       'picking_up:', data["picking_up"], 'sending pickup:', Rover.send_pickup, 
       'total time:', Rover.total_time, 'samples remaining:', data["sample_count"], 
       'samples found:', Rover.samples_found, 'can see rock:', Rover.can_see_rock, 
-      'Mode:', Rover.mode)
+      'Mode:', Rover.mode, 'stuck: ', Rover.stuck)
       # Get the current image from the center camera of the rover
       imgString = data["image"]
       image = Image.open(BytesIO(base64.b64decode(imgString)))
